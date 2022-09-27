@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{components/layout}">
+<head>
+    <title>T001Validate</title>
+</head>
+<body>
+<div layout:fragment="header">T001Input</div>
+<div layout:fragment="contents">
+    <form th:action="@{/t001}" th:method="post" th:object="${t001Form}" >
+        <div class="container　container-m">
+            <div th:if="${infoMessage}" class="row">
+                <div class="col-md-12 m-3">
+                    <div class="p-3 mb-2 bg-success text-white">
+                        <label th:text="${infoMessage}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 m-3">
+                    <label>text1:</label>
+                    <label th:text="*{text1}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 m-3">
+                    <label>text2:</label>
+                    <label th:text="*{text2}"/>
+                </div>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>text1</th>
+                    <th>text2</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="dept : ${deptList}" th:object="${dept}" class="align-middle">
+                    <td th:text="*{id}"></td>
+                    <td th:text="*{text1}"></td>
+                    <td th:text="*{text2}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-md-12 m-3">
+                    <button name="back" type="submit">戻る</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
