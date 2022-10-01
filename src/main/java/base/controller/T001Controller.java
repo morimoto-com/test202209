@@ -29,6 +29,10 @@ public class T001Controller {
     public String init(
             Model model,
             T001Form form) {
+
+        // DB取得処理
+        List<dept> list = t001Service.selectDb();
+        model.addAttribute("deptList", list);
         model.addAttribute("infoMessage", "初期処理完了");
         model.addAttribute(form);
         return "T001Input";

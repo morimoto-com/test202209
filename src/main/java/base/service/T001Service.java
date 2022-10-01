@@ -19,12 +19,12 @@ public class T001Service {
 
     public List<dept> selectDb(){
         // DB一覧取得処理
-        return jdbcTemplate.query("SELECT * FROM DEPT", new BeanPropertyRowMapper<dept>(dept.class));
+        return jdbcTemplate.query("SELECT * FROM TSET_TABLE", new BeanPropertyRowMapper<dept>(dept.class));
     }
 
     public void insertDb(T001Form form){
         // DB挿入処理
-        jdbcTemplate.update("INSERT INTO DEPT (text1, text2) VALUES (?, ?)", form.getText1() , form.getText2());
+        jdbcTemplate.update("INSERT INTO TSET_TABLE (text1, text2) VALUES (?, ?)", form.getText1() , form.getText2());
 
     }
 }
