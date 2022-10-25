@@ -1,11 +1,13 @@
 package base.controller;
 
 import base.dto.T001Form;
+import base.dto.deptDto;
 import base.entity.dept;
 import base.service.T001Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +33,7 @@ public class T001Controller {
             T001Form form) {
 
         // DB取得処理
-        List<dept> list = t001Service.selectDb();
+        List<deptDto> list = t001Service.selectDb();
         model.addAttribute("deptList", list);
         model.addAttribute("infoMessage", "初期処理完了");
         model.addAttribute(form);
@@ -47,12 +49,18 @@ public class T001Controller {
     @PostMapping(value="/t001", params="send")
     public String input(
             Model model,
-            @ModelAttribute T001Form form) {
+            @ModelAttribute T001Form form,
+            BindingResult result) {
         // DB登録処理
-        t001Service.insertDb(form);
+        if (!t001Service.insertDb(form, result)){
+            List<deptDto> list = t001Service.selectDb();
+            model.addAttribute("deptList", list);
+            model.addAttribute(form);
+            return "T001Input";
+        }
 
         // DB取得処理
-        List<dept> list = t001Service.selectDb();
+        List<deptDto> list = t001Service.selectDb();
         model.addAttribute("deptList", list);
 
         model.addAttribute("infoMessage", "DB登録完了");
@@ -61,7 +69,7 @@ public class T001Controller {
     }
 
     /**
-     * 送信ボタン押下処理
+     * 戻るボタン押下処理
      * @param model
      * @param form
      * @return
@@ -72,6 +80,6 @@ public class T001Controller {
             @ModelAttribute T001Form form) {
         model.addAttribute("infoMessage", "戻る処理完了");
         model.addAttribute(form);
-        return "T001Input";
+        return "redirect:/t001";
     }
 }

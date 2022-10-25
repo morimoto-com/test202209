@@ -9,14 +9,8 @@
 <div layout:fragment="header">T001Input.html</div>
 <div layout:fragment="contents">
     <form th:action="@{/t001}" th:method="post" th:object="${t001Form}" >
+        <label th:text="#{output.sample01}"/>
         <div class="container　container-m">
-            <div th:if="${infoMessage}" class="row">
-                <div class="col-md-12 m-3">
-                    <div class="p-3 mb-2 bg-success text-white">
-                        <label th:text="${infoMessage}"/>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12 m-3">
                     <label>text1</label>
