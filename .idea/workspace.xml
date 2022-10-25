@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f6b05eb9-df59-49de-9e0d-990d4b25f616" name="変更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/controller/T001Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controller/T001Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/dto/T001Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/dto/T001Form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/service/T001Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/service/T001Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +62,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/test202209" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,7 +78,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Shinji/IdeaProjects/test202210",
+    "last_opened_file_path": "C:/Users/Shinji/IdeaProjects/test202208",
     "project.structure.last.edited": "モジュール",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",

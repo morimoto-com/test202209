@@ -6,6 +6,7 @@ import base.service.T001Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,9 +48,10 @@ public class T001Controller {
     @PostMapping(value="/t001", params="send")
     public String input(
             Model model,
-            @ModelAttribute T001Form form) {
+            @ModelAttribute T001Form form,
+            BindingResult result) {
         // DB登録処理
-        t001Service.insertDb(form);
+        t001Service.insertDb(form, result);
 
         // DB取得処理
         List<dept> list = t001Service.selectDb();
