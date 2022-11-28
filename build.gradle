@@ -36,8 +36,19 @@ dependencies {
     testAnnotationProcessor "org.projectlombok:lombok"
     testCompileOnly "org.projectlombok:lombok"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 }
 
 test {
+    // JUnit platform を使う設定
     useJUnitPlatform()
+
+    testLogging {
+        // テスト時の標準出力と標準エラー出力を表示する
+        showStandardStreams true
+        // イベントを出力する (TestLogEvent)
+        events 'started', 'skipped', 'passed', 'failed'
+        // 例外発生時の出力設定 (TestExceptionFormat)
+        exceptionFormat 'full'
+    }
 }

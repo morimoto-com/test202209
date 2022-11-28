@@ -15,3 +15,6 @@ spring:
       # コンソールを有効化
       enabled: true
       path: /h2-console
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    cache: false
