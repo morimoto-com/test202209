@@ -2,8 +2,12 @@
 #server:
 #  port: 8081
 
-# JDBCドライバを指定
 spring:
+  # messageSource
+#  messages:
+#    basename: messages, ValidationMessages
+
+  # JDBCドライバを指定
   datasource:
     driver-class-name: org.h2.Driver
     # データベースのURL。メモリ上にtestdbを作成しますよ、と指定。
