@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb98eeb8-7e12-4bd3-8546-0ddc64d6d2e6" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/config/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/base/service/T001ServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/dto/T001Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/dto/T001Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/dto/deptDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/dto/deptDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/controller/T001ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/controller/T001ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +52,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +76,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shinji/IdeaProjects/test202209/src/main/resources/templates&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shinji/IdeaProjects/test202209&quot;,
     &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -105,16 +95,20 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="base.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="base.dto" />
+      <recent name="base" />
       <recent name="" />
+      <recent name="base.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.input_BeanValidator">
-    <configuration name="T001ControllerTest.init" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SampleAssertionsTest.testOk">
+    <configuration name="SampleAssertionsTest.falseAssertion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,7 +121,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;base.controller.T001ControllerTest.init&quot;" />
+            <option value="&quot;SampleAssertionsTest.falseAssertion&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -137,7 +131,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="input_BeanValidator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SampleAssertionsTest.notSameAssertion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +144,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;base.controller.T001ControllerTest$input_BeanValidator&quot;" />
+            <option value="&quot;SampleAssertionsTest.notSameAssertion&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,7 +154,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="input_BeanValidator.input" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SampleAssertionsTest.sameAssertion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,7 +167,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;base.controller.T001ControllerTest$input_BeanValidator.input&quot;" />
+            <option value="&quot;SampleAssertionsTest.sameAssertion&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -183,7 +177,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="input_BeanValidator.input_1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SampleAssertionsTest.testOk" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -196,7 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;base.controller.T001ControllerTest$input_BeanValidator.input_1&quot;" />
+            <option value="&quot;SampleAssertionsTest.testOk&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -206,41 +200,43 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="test202209 [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SampleAssertionsTest.trueAssertion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootRun" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SampleAssertionsTest.trueAssertion&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.input_BeanValidator" />
-        <item itemvalue="Gradle.test202209 [bootRun]" />
-        <item itemvalue="Gradle.input_BeanValidator.input_1" />
-        <item itemvalue="Gradle.input_BeanValidator.input" />
-        <item itemvalue="Gradle.T001ControllerTest.init" />
+        <item itemvalue="Gradle.SampleAssertionsTest.testOk" />
+        <item itemvalue="Gradle.SampleAssertionsTest.notSameAssertion" />
+        <item itemvalue="Gradle.SampleAssertionsTest.sameAssertion" />
+        <item itemvalue="Gradle.SampleAssertionsTest.falseAssertion" />
+        <item itemvalue="Gradle.SampleAssertionsTest.trueAssertion" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="デフォルトタスク">
-      <changelist id="f6b05eb9-df59-49de-9e0d-990d4b25f616" name="変更" comment="" />
+      <changelist id="bb98eeb8-7e12-4bd3-8546-0ddc64d6d2e6" name="変更" comment="" />
       <created>1664203094965</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

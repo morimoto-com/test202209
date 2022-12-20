@@ -41,7 +41,10 @@ dependencies {
 
 test {
     // JUnit platform を使う設定
-    useJUnitPlatform()
+    useJUnitPlatform{
+//        includeTags 'tag1'
+//        excludeTags 'tagMethod1'
+    }
 
     testLogging {
         // テスト時の標準出力と標準エラー出力を表示する
