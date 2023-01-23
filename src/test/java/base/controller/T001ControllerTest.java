@@ -2,11 +2,13 @@ package base.controller;
 
 import base.dto.T001Form;
 import base.service.T001Service;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.bind.Name;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.validation.BindException;
@@ -50,7 +52,6 @@ class T001ControllerTest {
     @Test
     void init() throws Exception {
         mockMvc.perform(get("/t001"))
-                .andExpect(status().isOk())
                 // ステータスがOKであることを確認
                 .andExpect(status().isOk())
                 // 次画面の遷移先がindex.htmlであることを確認
@@ -61,6 +62,27 @@ class T001ControllerTest {
 //                .andExpect(request().sessionAttribute("sesHashMap", createHashMap()))
                 // Modelオブジェクトにエラーが無いことを確認
                 .andExpect(model().hasNoErrors());
+    }
+
+    @Test
+    void input() throws Exception {
+        T001Form form = new T001Form();
+        ObjectMapper objectMapper = new ObjectMapper();
+        form.setText1("111");
+        form.setText2("0");
+        mockMvc.perform(post("/t001").param("send", "send")
+                                .content(objectMapper.writeValueAsString(form))
+                                .contentType(MediaType.APPLICATION_JSON_VALUE))
+                // ステータスがOKであることを確認
+                .andExpect(status().isOk())
+                // 次画面の遷移先がindex.htmlであることを確認
+                .andExpect(view().name("T001Confirm"))
+                // modelに設定された値が正しいことを確認
+                .andExpect(model().attribute("infoMessage", "DB登録完了"))
+                // Modelオブジェクトにエラーが無いことを確認
+                .andExpect(model().hasNoErrors())
+                .andExpect(model().attribute("t001Form", form));
+
     }
 
     @Nested
